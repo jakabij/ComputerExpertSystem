@@ -37,7 +37,7 @@
     </Rule>
 	
 	<Rule id="MusicCategory">
-        <Question>Do you want to listen music?</Question>
+        <Question>Do you want to listen to music?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
