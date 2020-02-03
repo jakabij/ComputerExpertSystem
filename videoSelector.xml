@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rules>
-    <Rule id="HumourCategory">
+    <Rule id="Humour">
         <Question>Do you want to laugh?</Question>
         <Answer>
             <Selection value="true">
@@ -12,7 +12,7 @@
         </Answer>
     </Rule>
     
-	<Rule id="EducateCategory">
+	<Rule id="Educate">
         <Question>Do you want to educate yourself?</Question>
         <Answer>
             <Selection value="true">
@@ -24,7 +24,7 @@
         </Answer>
     </Rule>
 	
-	<Rule id="MusicCategory">
+	<Rule id="Music">
         <Question>Do you want to listen to music?</Question>
         <Answer>
             <Selection value="true">
@@ -36,7 +36,7 @@
         </Answer>
     </Rule>
 	
-	<Rule id="GameplayCategory">
+	<Rule id="Gameplay">
         <Question>Do you want to watch videos about animals?</Question>
         <Answer>
             <Selection value="true">
