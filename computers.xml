@@ -24,18 +24,6 @@
         </Answer>
     </Rule>
 	
-	<Rule id="AnimalCategory">
-        <Question>Do you want to watch videos about animals?</Question>
-        <Answer>
-            <Selection value="true">
-                <SingleValue value="yes"/>
-            </Selection>
-            <Selection value="false">
-                <SingleValue value="no"/>
-            </Selection>
-        </Answer>
-    </Rule>
-	
 	<Rule id="MusicCategory">
         <Question>Do you want to listen to music?</Question>
         <Answer>
@@ -50,19 +38,6 @@
 	
 	<Rule id="GameplayCategory">
         <Question>Do you want to watch videos about animals?</Question>
-        <Answer>
-            <Selection value="true">
-                <SingleValue value="yes"/>
-            </Selection>
-            <Selection value="false">
-                <SingleValue value="no"/>
-            </Selection>
-        </Answer>
-    </Rule>
-	
-	
-	<Rule id="NatureCategory">
-        <Question>Do you want to watch videos about nature?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
