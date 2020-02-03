@@ -6,7 +6,7 @@ namespace VideoExpertSystem
 {
     abstract class Value
     {
-        public abstract List<String> GetInpitPattern();
+        public abstract List<string> GetInputPattern();
 
         public abstract bool GetSelectionType();
     }

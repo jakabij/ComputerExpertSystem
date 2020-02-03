@@ -7,7 +7,7 @@ namespace VideoExpertSystem
     interface IIterator : IEnumerable<object>
 
     {
-        public bool HasNext();
-        public object Next();
+        bool HasNext();
+        object Next();
     }
 }
