@@ -7,10 +7,21 @@ namespace VideoExpertSystem
 {
     class QuestionIterator : IEnumerator<Question>
     {
-        public Question Current => throw new NotImplementedException();
+        public Question Current { get; private set; }
 
-        object IEnumerator.Current => throw new NotImplementedException();
+        object IEnumerator.Current => Current;
 
+        int Stop
+        { 
+            get
+            {
+                return 0;
+            }
+            set
+            { 
+
+            } 
+        }
         public void Dispose()
         {
             throw new NotImplementedException();

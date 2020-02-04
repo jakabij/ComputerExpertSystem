@@ -6,7 +6,7 @@ namespace VideoExpertSystem
 {
     class Answer
     {
-        Value value;
+        public Value value;
 
         public bool EvaluateAnswerByInput(string input)
         {
