@@ -6,5 +6,9 @@ namespace VideoExpertSystem
 {
     class FactParser
     {
+        public string Description { get; set; }
+        public string Id { get; set; }
+
+
     }
 }

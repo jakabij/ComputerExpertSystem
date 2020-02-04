@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Facts>
+    <Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+    <Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+    <Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+	</Fact>
+
+    <Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">true</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">true</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+	
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">true</Eval>
+            <Eval id="Educate">true</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+
+	<Fact id="tesla">
+        <Description value="Tesla Model S"/>
+        <Evals>
+            <Eval id="Humour">false</Eval>
+            <Eval id="Educate">false</Eval>
+            <Eval id="Music">false</Eval>
+            <Eval id="Gameplay">false</Eval>
+        </Evals>
+    </Fact>
+</Facts>

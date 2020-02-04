@@ -6,6 +6,6 @@ namespace VideoExpertSystem
 {
     interface XMLParser
     {
-        public void LoadXmlDocument(string xmlPath);
+        void LoadXmlDocument(string xmlPath);
     }
 }
