@@ -6,13 +6,14 @@ namespace VideoExpertSystem
 {
     class FactRepository
     {
-        private List<Fact> _factRepo = new List<Fact>();
+        private Dictionary<string,Fact> _factdict = new Dictionary<string, Fact>();
 
-        public List<Fact> FactRepo
+        public Dictionary<string,Fact> MyProperty
         {
-            get { return _factRepo; }
-            set { _factRepo = value; }
+            get { return _factdict; }
+            set { _factdict = value; }
         }
+
         public void AddFact(Fact fact)
         {
             FactRepo.Add(fact);

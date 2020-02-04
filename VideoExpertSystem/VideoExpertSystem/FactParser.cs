@@ -10,8 +10,13 @@ namespace VideoExpertSystem
     {
         public string Description { get; set; }
         public string Id { get; set; }
+        private List<Fact> _factRepo = new List<Fact>();
 
-        public List<Fact> FactRepo { get; set; }
+        public List<Fact> FactRepo
+        {
+            get { return _factRepo ; }
+            set { _factRepo = value; }
+        }
 
         public void LoadXmlDocument(string xmlPath)
         {
@@ -25,16 +30,14 @@ namespace VideoExpertSystem
                 Fact f = new Fact(description, id);
                 for (int j = 0; j < evals.Count; j++)
                 {
-                    f.SetFactValueById(evals[j].Value, Convert.ToBoolean(evals[j].Attribute("id").Value));
+                    f.SetFactValueById((evals[j].Attribute("id").Value), Convert.ToBoolean(evals[j].Value));
                 }
+                _factRepo.Add(f);
             }
-            string id = (String)element.Element("Fact").Attribute("id").Value;
-            string description = (String)element.Element("Fact").Element("Description").Attribute("Value").Value;
-            
-            Console.WriteLine(id);
-            Console.WriteLine(description);
-
-            Fact factrep = new Fact()
+        }
+        public FactRepository GetFactRepository()
+        {
+            return new FactRepository();
         }
     }
 }
