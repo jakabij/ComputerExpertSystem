@@ -9,12 +9,31 @@ namespace VideoExpertSystem
 {
     public class RuleParser : XMLParser
     {
-        Dictionary<string,List<string>> dictionarytOfQuestions=new Dictionary<string, List<string>>();
-        int sizeOfDictionary=0;
-        ESProvider provider = new ESProvider();
 
         public RuleRepository GetRuleRepository()
         {
+            var factRepository = new FactRepository();
+            var xmlDocument = base.LoadXmlDocument("Rules.xml");
+
+            foreach (XmlNode node in xmlDocument.DocumentElement)
+            {
+                Question question = new Question(node.Attributes["id"].Value,node.ChildNodes[0].InnerText,new Answer());
+                
+
+
+
+
+
+
+
+                List<string> listOfSelection = new List<string>();
+                listOfSelection.Add(node.ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes["value"].Value);
+                listOfSelection.Add(node.ChildNodes[1].ChildNodes[1].ChildNodes[0].Attributes["value"].Value);
+
+                dictionarytOfQuestions.Add(node.ChildNodes[0].InnerText, listOfSelection);
+            }
+
+
             return new RuleRepository();
         }
 

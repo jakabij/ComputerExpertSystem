@@ -7,16 +7,11 @@ namespace VideoExpertSystem
 {
     public class Question
     {
-        
         public string Id { get; set; }
         public string TheQuestion { get; set; }
         public Answer answer;
 
-        public Question()
-        {
-
-        }
-        public Question(string id, string theQuestion,Answer answer)
+        public Question(string id, string theQuestion, Answer answer)
         {
             Id = id;
             TheQuestion = theQuestion;

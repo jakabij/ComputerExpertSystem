@@ -10,6 +10,9 @@ namespace VideoExpertSystem
 
         public bool EvaluateAnswerByInput(string input)
         {
+            
+
+
             if (input.ToLower().Equals("yes"))
                 return true;
 
