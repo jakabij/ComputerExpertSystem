@@ -6,9 +6,9 @@ using System.Xml.Serialization;
 
 namespace VideoExpertSystem
 {
-    class RuleParser : XMLParser
+    public class RuleParser : XMLParser
     {
-        List<RuleRepository> listOfQuestions;
+        List<Question> listOfQuestions;
         ESProvider provider = new ESProvider();
 
         public RuleRepository GetRuleRepository()
@@ -18,10 +18,10 @@ namespace VideoExpertSystem
 
         public void LoadXmlDocument(string xmlPath)
         {
-            XmlSerializer xml = new XmlSerializer(typeof(RuleRepository));
+            XmlSerializer xml = new XmlSerializer(typeof(List<Question>));
             using (FileStream fs = File.OpenRead(xmlPath))
             {
-                this.listOfQuestions=(List<RuleRepository>)xml.Deserialize(fs);
+                this.listOfQuestions=(List<Question>)xml.Deserialize(fs);
             }
         }
     }

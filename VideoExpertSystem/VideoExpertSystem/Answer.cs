@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class Answer
+    public class Answer
     {
         public Value value;
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class SingleValue : Value
+    public class SingleValue : Value
     {
         string Param { get; set; }
         bool SelectionType { get; set; }

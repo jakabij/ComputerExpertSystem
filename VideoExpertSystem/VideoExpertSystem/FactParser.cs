@@ -29,7 +29,7 @@ namespace VideoExpertSystem
             Console.WriteLine(id);
             Console.WriteLine(description);
 
-            Fact factrep = new Fact()
+            Fact factrep = new Fact(description,id);
         }
     }
 }

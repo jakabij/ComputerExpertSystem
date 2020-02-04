@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace VideoExpertSystem
 {
-    class Question
+    public class Question
     {
-        string Id { get; set; }
-        string TheQuestion { get; set; }
+        [XmlAttribute("id")]
+        public string Id { get; set; }
+        public string TheQuestion { get; set; }
         public Answer answer;
 
+        public Question()
+        {
+
+        }
         public Question(string id, string theQuestion,Answer answer)
         {
             Id = id;

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class QuestionIterator : IEnumerator<Question>
+    public class QuestionIterator : IEnumerator<Question>
     {
         public Question Current { get; private set; }
 

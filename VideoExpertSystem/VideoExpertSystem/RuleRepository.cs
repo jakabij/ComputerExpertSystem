@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class RuleRepository
+    public class RuleRepository
     {
         Question question;
         QuestionIterator questionIterator;
