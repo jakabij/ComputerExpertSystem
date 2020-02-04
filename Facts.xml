@@ -11,7 +11,7 @@
     </Fact>
 
     <Fact id="https://www.youtube.com/watch?v=7IVWbpfX9xY">
-        <Description value="You've got to be joking TED Talk"/>
+        <Description value="You have got to be joking TED Talk"/>
         <Evals>
             <Eval id="Humour">false</Eval>
             <Eval id="Educate">true</Eval>
@@ -20,7 +20,7 @@
         </Evals>
     </Fact>
 
-    <Fact id="https://www.youtube.com/watch?v=3W2yGwCE8ik&list=PLG13E3yljmDrV1Qe3WbdzSbjC9K0xN6nm">
+    <Fact id="https://www.youtube.com/watch?v=3W2yGwCE8ik&amp;list=PLG13E3yljmDrV1Qe3WbdzSbjC9K0xN6nm">
         <Description value="Lynn Music - Boulangerie"/>
         <Evals>
             <Eval id="Humour">true</Eval>
@@ -30,7 +30,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="https://www.youtube.com/watch?v=i7jWg-gHjgM&list=PLG13E3yljmDrV1Qe3WbdzSbjC9K0xN6nm&index=2">
+	<Fact id="https://www.youtube.com/watch?v=i7jWg-gHjgM&amp;list=PLG13E3yljmDrV1Qe3WbdzSbjC9K0xN6nm&amp;index=2">
         <Description value="Wolfenstein: The New Order"/>
         <Evals>
             <Eval id="Humour">true</Eval>
@@ -111,7 +111,7 @@
     </Fact>
 
 	<Fact id="https://www.youtube.com/watch?v=xh1ROLEDyP4">
-        <Description value="8 Mile | Eminem's Final Rap Battles"/>
+        <Description value="Eminem Final Rap Battles"/>
         <Evals>
             <Eval id="Humour">true</Eval>
             <Eval id="Educate">false</Eval>
@@ -141,7 +141,7 @@
     </Fact>
 	
 	<Fact id="https://www.youtube.com/watch?v=uLkKD2hFnIc">
-        <Description value="Nas & Damian Marley - Patience"/>
+        <Description value="Nas &amp; Damian Marley - Patience"/>
         <Evals>
             <Eval id="Humour">true</Eval>
             <Eval id="Educate">true</Eval>
