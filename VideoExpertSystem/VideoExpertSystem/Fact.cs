@@ -9,16 +9,18 @@ namespace VideoExpertSystem
         public string Description { get; set; }
         public string Id { get; set; }
 
-        public bool Value { get; set; }
+        public Dictionary<string, bool> Value { get; set; }
 
         public HashSet<String> SetOfId { get; set; }
+
+        
 
         public Fact(string description, string id)
         {
             Description = description;
             Id = id;
         }
-
+        
         public HashSet<String> GitIdHashSet()
         {
             return this.SetOfId;
@@ -26,15 +28,12 @@ namespace VideoExpertSystem
 
         public void SetFactValueById(String id, bool value)
         {
-            if (id == this.Id)
-            {
-                this.Value = value;
-            }
+            Value[id] = value;
         }
 
-        public bool GetValueById(String Id)
+        public bool GetValueById(String id)
         {
-
+            return Value[id]
         }
 
         public string GetDescription()
