@@ -40,18 +40,19 @@ namespace VideoExpertSystem
             {
                 XElement fact = element.Elements("Fact").ToList()[i];
                 var evals = fact.Element("Evals").Elements("Eval").ToList();
+                string id = fact.Attribute("id").Value;
+                string description = fact.Element("Description").Attribute("value").Value;
+                Fact f = new Fact(description, id);
                 for (int j = 0; j < evals.Count; j++)
                 {
-                    Console.WriteLine(evals[j].Value + evals[j].Attribute("id").Value);
+                    f.SetFactValueById((evals[j].Attribute("id").Value), Convert.ToBoolean(evals[j].Value));
                 }
+                _factRepo.Add(f);
             }
-            string id = (String)element.Element("Fact").Attribute("id").Value;
-            string description = (String)element.Element("Fact").Element("Description").Attribute("Value").Value;
-            
-            Console.WriteLine(id);
-            Console.WriteLine(description);
-
-            Fact factrep = new Fact(description,id);
+        }
+        public FactRepository GetFactRepository()
+        {
+            return new FactRepository();
         }
     }
 }
