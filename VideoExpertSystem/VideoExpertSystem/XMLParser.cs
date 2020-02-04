@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace VideoExpertSystem
 {
-    interface XMLParser
+    abstract class XMLParser
     {
-        void LoadXmlDocument(string xmlPath);
+        public XmlDocument LoadXmlDocument(string xmlPath)
+        {
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(xmlPath);
+            return xmlDocument;
+        }
     }
 }

@@ -9,27 +9,37 @@ namespace VideoExpertSystem
 {
     public class RuleParser : XMLParser
     {
-        List<Question> listOfQuestions;
+        Dictionary<string,List<string>> dictionarytOfQuestions=new Dictionary<string, List<string>>();
+        int sizeOfDictionary=0;
         ESProvider provider = new ESProvider();
 
         public RuleRepository GetRuleRepository()
         {
-            return new RuleRepository(listOfQuestions.Count);
+            return new RuleRepository(sizeOfDictionary);
         }
 
-        public void LoadXmlDocument(string xmlPath)
+        public void LoadXmlDocument(XmlDocument xmlDocument)
         {
-            XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load("Rules.xml");
             foreach (XmlNode node in xmlDocument.DocumentElement)
             {
+                List<string> listOfSelection = new List<string>();
+                listOfSelection.Add(node.ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes["value"].Value);
+                listOfSelection.Add(node.ChildNodes[1].ChildNodes[1].ChildNodes[0].Attributes["value"].Value);
 
-
-
-
-                //Console.WriteLine(node.ChildNodes[0].InnerText);
-                //ChildNodes[1].ChildNodes[0].Attributes["value"].Value
+                dictionarytOfQuestions.Add(node.ChildNodes[0].InnerText, listOfSelection);
             }
+
+            foreach(var item in dictionarytOfQuestions)
+            {
+                Console.WriteLine(item.Key+": "+item.Value[0]+ item.Value[1]);
+            }
+
+            //.Attributes["Selection"].Attributes["SingleValue"].Attributes["value"].Value);
+
+            //dictionarytOfQuestions.Add(node.Attributes["Question"].InnerText,)
+            //Console.WriteLine(node.ChildNodes[0].InnerText);
+            //ChildNodes[1].ChildNodes[0].Attributes["value"].Value
+
         }
     }
 }
