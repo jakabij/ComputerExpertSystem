@@ -4,9 +4,9 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class Answer
+    public class Answer
     {
-        Value value;
+        public Value value;
 
         public bool EvaluateAnswerByInput(string input)
         {

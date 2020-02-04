@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    abstract class Value
+    public abstract class Value
     {
         public abstract List<string> GetInputPattern();
 

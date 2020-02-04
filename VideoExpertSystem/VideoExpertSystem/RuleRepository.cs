@@ -4,9 +4,16 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class RuleRepository
+    public class RuleRepository
     {
         Question question;
+        QuestionIterator questionIterator;
+
+        public int Stop { get; set; }   ///////////////////////////////////////////not the best way
+        public RuleRepository(int stop)
+        {
+            Stop = stop;
+        }
 
         public void AddQuestion(Question question)
         {
@@ -15,7 +22,7 @@ namespace VideoExpertSystem
 
         public QuestionIterator GetIterator()
         {
-            return null;
+            return new QuestionIterator(this.Stop);
         }
     }
 }

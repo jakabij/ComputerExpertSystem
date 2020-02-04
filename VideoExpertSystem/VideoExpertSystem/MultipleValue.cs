@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class MultipleValue : Value
+    public class MultipleValue : Value
     {
         List<string> paramList;
         bool SelectionType { get; set; }

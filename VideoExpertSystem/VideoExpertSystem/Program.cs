@@ -6,7 +6,8 @@ namespace VideoExpertSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RuleParser p = new RuleParser();
+            p.LoadXmlDocument("Rules.xml");
         }
     }
 }

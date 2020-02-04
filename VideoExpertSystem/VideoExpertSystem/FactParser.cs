@@ -28,6 +28,13 @@ namespace VideoExpertSystem
                     f.SetFactValueById(evals[j].Value, Convert.ToBoolean(evals[j].Attribute("id").Value));
                 }
             }
+            string id = (String)element.Element("Fact").Attribute("id").Value;
+            string description = (String)element.Element("Fact").Element("Description").Attribute("Value").Value;
+            
+            Console.WriteLine(id);
+            Console.WriteLine(description);
+
+            Fact factrep = new Fact()
         }
     }
 }

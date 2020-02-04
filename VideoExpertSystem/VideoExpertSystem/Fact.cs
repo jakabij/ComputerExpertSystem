@@ -33,7 +33,7 @@ namespace VideoExpertSystem
 
         public bool GetValueById(String id)
         {
-            return Value[id]
+            return Value[id];
         }
 
         public string GetDescription()
