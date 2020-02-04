@@ -6,23 +6,26 @@ namespace VideoExpertSystem
 {
     public class RuleRepository
     {
-        Question question;
-        QuestionIterator questionIterator;
+        List<Question> questionList = new List<Question>();
 
-        public int Stop { get; set; }   ///////////////////////////////////////////not the best way
-        public RuleRepository(int stop)
-        {
-            Stop = stop;
-        }
 
         public void AddQuestion(Question question)
         {
-            this.question = question;
+            this.questionList.Add(question);
         }
 
-        public QuestionIterator GetIterator()
-        {
-            return new QuestionIterator(this.Stop);
-        }
+        /*
+               public int Stop { get; set; }   ///////////////////////////////////////////not the best way
+               public RuleRepository(int stop)
+               {
+                   Stop = stop;
+               }
+
+              
+
+              public QuestionIterator GetIterator()
+               {
+                   return null;
+               }*/
     }
 }

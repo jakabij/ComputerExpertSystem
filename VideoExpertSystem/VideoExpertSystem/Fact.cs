@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class Fact
+    public class Fact
     {
         public string Description { get; set; }
         public string Id { get; set; }
@@ -19,9 +19,11 @@ namespace VideoExpertSystem
         {
             Description = description;
             Id = id;
+            this.Value = new Dictionary<string, bool>();
+            this.SetOfId = new HashSet<string>();
         }
         
-        public HashSet<String> GitIdHashSet()
+        public HashSet<String> GetIdHashSet()
         {
             return this.SetOfId;
         }

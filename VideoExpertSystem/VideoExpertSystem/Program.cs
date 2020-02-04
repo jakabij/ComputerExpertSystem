@@ -6,8 +6,15 @@ namespace VideoExpertSystem
     {
         static void Main(string[] args)
         {
-            RuleParser p = new RuleParser();
-            p.LoadXmlDocument("Rules.xml");
+            FactParser fact = new FactParser();
+            fact.LoadXmlDocument("Facts.xml");
+
+            FactRepository f= fact.GetFactRepository();
+            foreach(var item in f.FactRepo)
+            {
+                Console.WriteLine(item.Description);
+            }
+      
         }
     }
 }

@@ -4,24 +4,27 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class FactRepository
+    public class FactRepository
     {
-        private Dictionary<string,Fact> _factdict = new Dictionary<string, Fact>();
 
-        public Dictionary<string,Fact> MyProperty
+        private List<Fact> _factRepo = new List<Fact>();
+        //private FactIterator factIterator;
+
+        public List<Fact> FactRepo
         {
-            get { return _factdict; }
-            set { _factdict = value; }
+            get { return _factRepo; }
+            set { _factRepo = value; }
         }
+
 
         public void AddFact(Fact fact)
         {
             FactRepo.Add(fact);
         }
-        public FactIterator GetIterator()
+        /*public FactIterator GetIterator()
         {
             FactIterator f = new FactIterator();
             return f;
-        }
+        }*/
     }
 }

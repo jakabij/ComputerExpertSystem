@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace VideoExpertSystem
 {
-    abstract class XMLParser
+    public abstract class XMLParser
     {
         public XmlDocument LoadXmlDocument(string xmlPath)
         {

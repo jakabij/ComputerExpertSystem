@@ -15,7 +15,7 @@ namespace VideoExpertSystem
 
         public RuleRepository GetRuleRepository()
         {
-            return new RuleRepository(sizeOfDictionary);
+            return new RuleRepository();
         }
 
         public void LoadXmlDocument(XmlDocument xmlDocument)
@@ -28,18 +28,6 @@ namespace VideoExpertSystem
 
                 dictionarytOfQuestions.Add(node.ChildNodes[0].InnerText, listOfSelection);
             }
-
-            foreach(var item in dictionarytOfQuestions)
-            {
-                Console.WriteLine(item.Key+": "+item.Value[0]+ item.Value[1]);
-            }
-
-            //.Attributes["Selection"].Attributes["SingleValue"].Attributes["value"].Value);
-
-            //dictionarytOfQuestions.Add(node.Attributes["Question"].InnerText,)
-            //Console.WriteLine(node.ChildNodes[0].InnerText);
-            //ChildNodes[1].ChildNodes[0].Attributes["value"].Value
-
         }
     }
 }
