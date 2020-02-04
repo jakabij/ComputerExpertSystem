@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Xml.Serialization;
+using System.Xml;
 
 namespace VideoExpertSystem
 {
@@ -18,10 +19,16 @@ namespace VideoExpertSystem
 
         public void LoadXmlDocument(string xmlPath)
         {
-            XmlSerializer xml = new XmlSerializer(typeof(List<Question>));
-            using (FileStream fs = File.OpenRead(xmlPath))
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load("Rules.xml");
+            foreach (XmlNode node in xmlDocument.DocumentElement)
             {
-                this.listOfQuestions=(List<Question>)xml.Deserialize(fs);
+
+
+
+
+                //Console.WriteLine(node.ChildNodes[0].InnerText);
+                //ChildNodes[1].ChildNodes[0].Attributes["value"].Value
             }
         }
     }

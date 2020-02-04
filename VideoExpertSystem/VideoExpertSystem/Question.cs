@@ -7,7 +7,7 @@ namespace VideoExpertSystem
 {
     public class Question
     {
-        [XmlAttribute("id")]
+        
         public string Id { get; set; }
         public string TheQuestion { get; set; }
         public Answer answer;
