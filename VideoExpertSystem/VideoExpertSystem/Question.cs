@@ -8,7 +8,7 @@ namespace VideoExpertSystem
     {
         string Id { get; set; }
         string TheQuestion { get; set; }
-        Answer answer;
+        public Answer answer;
 
         public Question(string id, string theQuestion,Answer answer)
         {

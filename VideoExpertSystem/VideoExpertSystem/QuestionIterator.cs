@@ -11,17 +11,14 @@ namespace VideoExpertSystem
 
         object IEnumerator.Current => Current;
 
-        int Stop
-        { 
-            get
-            {
-                return 0;
-            }
-            set
-            { 
-
-            } 
+        int start = 0;
+        int Stop { get; set; }
+        
+        public QuestionIterator(int stop)
+        {
+            Stop = stop;
         }
+
         public void Dispose()
         {
             throw new NotImplementedException();
@@ -29,12 +26,18 @@ namespace VideoExpertSystem
 
         public bool MoveNext()
         {
-            throw new NotImplementedException();
+            
+            if (start < Stop)
+            {
+                start++;
+                return true;
+            }
+            return false;
         }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            start=0;
         }
     }
 }
