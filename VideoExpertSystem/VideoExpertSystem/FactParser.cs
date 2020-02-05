@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.Xml.Linq;
 using System.Xml;
 
 namespace VideoExpertSystem
@@ -32,6 +28,6 @@ namespace VideoExpertSystem
                 factRepository.AddFact(fact);   
             }
             return factRepository;
-        }   
+        }
     }
 }

@@ -49,7 +49,12 @@ namespace VideoExpertSystem
 
         public string Evaluate()
         {
-            var fr = _factParser.GetFactRepository().FactRepo;
+            var fr = _factParser.GetFactRepository();
+
+            //fr.GetEnumerator().Current.Value[index]
+
+
+
             foreach (var item in fr)
             {
                 var factCounter = 0;
