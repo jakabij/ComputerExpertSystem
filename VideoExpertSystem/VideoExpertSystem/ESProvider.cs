@@ -4,7 +4,8 @@ using System.Text;
 
 namespace VideoExpertSystem
 {
-    class ESProvider
+    public class ESProvider
     {
+
     }
 }
