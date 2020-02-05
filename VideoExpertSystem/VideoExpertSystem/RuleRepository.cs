@@ -8,10 +8,15 @@ namespace VideoExpertSystem
     {
         List<Question> questionList = new List<Question>();
 
+        public List<Question> QuestionList
+        {
+            get { return questionList; }
+            set { questionList = value; }
+        }
 
         public void AddQuestion(Question question)
         {
-            this.questionList.Add(question);
+            this.QuestionList.Add(question);
         }
 
         /*

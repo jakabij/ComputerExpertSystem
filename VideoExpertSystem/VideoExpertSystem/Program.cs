@@ -6,6 +6,7 @@ namespace VideoExpertSystem
     {
         static void Main(string[] args)
         {
+            /*
             FactParser fact = new FactParser();
 
             
@@ -13,7 +14,20 @@ namespace VideoExpertSystem
             {
                 Console.WriteLine(item.Description);
             }
-      
+      */
+
+
+            RuleParser r = new RuleParser();
+
+            foreach(var item in r.GetRuleRepository().QuestionList)
+            {
+                Console.WriteLine(item.TheQuestion);
+                foreach(var a in item.answer.valueList)
+                {
+                    Console.WriteLine(a.GetSelectionType());
+                    Console.WriteLine(a.GetInputPattern()[0]);
+                }
+            }
         }
     }
 }

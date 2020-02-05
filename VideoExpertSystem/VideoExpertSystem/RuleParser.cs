@@ -15,55 +15,35 @@ namespace VideoExpertSystem
         {
             var factRepository = new FactRepository();
             var xmlDocument = base.LoadXmlDocument("Rules.xml");
+            RuleRepository ruleRepository = new RuleRepository();
 
             foreach (XmlNode node in xmlDocument.DocumentElement)
             {
-                string input=null;
-                var ans = new Answer();
+                Answer ans = new Answer();
+                foreach(XmlNode node2 in node.ChildNodes[1].ChildNodes)
 
-                for(int count=0;count<node.ChildNodes[0].ChildNodes[1].ChildNodes.Count;count++)
                 {
-                    string rules = node.ChildNodes[0].ChildNodes[1].ChildNodes[count].ChildNodes[0].Attributes["value"].Value;
+              
+                    string rules = node2.ChildNodes[0].Attributes["value"].Value;
                     List<string> stringOfLists = rules.Split(",").ToList<string>();
-
-                    ans.valueDictionary.Add(Convert.ToBoolean(
-                        node.ChildNodes[0].ChildNodes[1].ChildNodes[count].Attributes["value"].Value), stringOfLists);
+                    if (stringOfLists.Count>1)
+                    {
+                        ans.AddValue(new MultipleValue(stringOfLists, Convert.ToBoolean(node2.Attributes["value"].Value)));
+                    }
+                    else if(stringOfLists.Count==1)
+                    {
+                        ans.AddValue(new SingleValue(stringOfLists[0], Convert.ToBoolean(node2.Attributes["value"].Value)));
+                    }
+                    else
+                    {
+                        throw new Exception("No NULL attribute accepted here!");
+                    }   
                 }
-
                 Question question = new Question(node.Attributes["id"].Value,node.ChildNodes[0].InnerText,ans);
-                
-
-                answer.EvaluateAnswerByInput
-                question.EvaluateAnswerByInput(input);
-                
-
-
-
-
-
-
-
-                List<string> listOfSelection = new List<string>();
-                listOfSelection.Add(node.ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes["value"].Value);
-                listOfSelection.Add(node.ChildNodes[1].ChildNodes[1].ChildNodes[0].Attributes["value"].Value);
-
-                dictionarytOfQuestions.Add(node.ChildNodes[0].InnerText, listOfSelection);
+                ruleRepository.AddQuestion(question);
             }
-
-
-            return new RuleRepository();
-        }
-
-        public void LoadXmlDocument(XmlDocument xmlDocument)
-        {
-            foreach (XmlNode node in xmlDocument.DocumentElement)
-            {
-                List<string> listOfSelection = new List<string>();
-                listOfSelection.Add(node.ChildNodes[1].ChildNodes[0].ChildNodes[0].Attributes["value"].Value);
-                listOfSelection.Add(node.ChildNodes[1].ChildNodes[1].ChildNodes[0].Attributes["value"].Value);
-
-                dictionarytOfQuestions.Add(node.ChildNodes[0].InnerText, listOfSelection);
-            }
+            return ruleRepository;
+            
         }
     }
 }

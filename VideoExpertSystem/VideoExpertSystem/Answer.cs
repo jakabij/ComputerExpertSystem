@@ -6,35 +6,27 @@ namespace VideoExpertSystem
 {
     public class Answer
     {
-        public Value value;
-        public Dictionary<bool, List<string>> valueDictionary;
+        public  List<Value> valueList;
+        
 
         public Answer()
         {
-            this.valueDictionary = new Dictionary<bool, List<string>>();
+            this.valueList = new List<Value>();
         }
 
         public bool EvaluateAnswerByInput(string input)
         {
-            if (input in this.valueDictionary[true])
+            foreach(var item in valueList)
             {
-                return true;
+                if (item.GetInputPattern().Contains(input))
+                    return item.GetSelectionType();
             }
-
-
-            if (input.ToLower().Equals("yes"))
-                return true;
-
-            else if (input.ToLower().Equals("no"))
-                return false;
-
-            else
-                throw new Exception("Wrong input!");
+            throw new Exception("Wrong attribute! No value like "+input);
         }
 
         public void AddValue(Value value)
         {
-            this.value = value;
+            this.valueList.Add(value);
         }
     }
 }
