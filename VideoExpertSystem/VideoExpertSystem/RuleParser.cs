@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using System.Xml.Serialization;
 using System.Xml;
+using System.Linq;
 
 namespace VideoExpertSystem
 {
@@ -17,7 +18,23 @@ namespace VideoExpertSystem
 
             foreach (XmlNode node in xmlDocument.DocumentElement)
             {
-                Question question = new Question(node.Attributes["id"].Value,node.ChildNodes[0].InnerText,new Answer());
+                string input=null;
+                var ans = new Answer();
+
+                for(int count=0;count<node.ChildNodes[0].ChildNodes[1].ChildNodes.Count;count++)
+                {
+                    string rules = node.ChildNodes[0].ChildNodes[1].ChildNodes[count].ChildNodes[0].Attributes["value"].Value;
+                    List<string> stringOfLists = rules.Split(",").ToList<string>();
+
+                    ans.valueDictionary.Add(Convert.ToBoolean(
+                        node.ChildNodes[0].ChildNodes[1].ChildNodes[count].Attributes["value"].Value), stringOfLists);
+                }
+
+                Question question = new Question(node.Attributes["id"].Value,node.ChildNodes[0].InnerText,ans);
+                
+
+                answer.EvaluateAnswerByInput
+                question.EvaluateAnswerByInput(input);
                 
 
 
