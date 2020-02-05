@@ -22,26 +22,29 @@ namespace VideoExpertSystem
             _ruleParser = ruleParser;
             answers = new List<Value>();
             CollectAnswers();
-            Evaluate();
+            Console.WriteLine(Evaluate());
         }
         public void CollectAnswers()
         {
-            foreach (var question in _ruleParser.GetRuleRepository().QuestionList)
+            var qr = _ruleParser.GetRuleRepository();
+            var ens = qr.GetEnumerator();
+            while (ens.MoveNext())
             {
-                Answers.Add(new SingleValue(question.Id, GetAnswerByQuestion(question.Id)));
-
-                // Multiple value missing
+                Answers.Add(new SingleValue(ens.Current.Id, GetAnswerByQuestion(ens.Current.Id)));
             }
         }
+
         public bool GetAnswerByQuestion(string questionId)
         {
-            foreach (var question in _ruleParser.GetRuleRepository().QuestionList)
+            var qr = _ruleParser.GetRuleRepository();
+            var en = qr.GetEnumerator();
+            while(en.MoveNext())
             {
-                if (question.Id.Equals(questionId))
+                if (en.Current.Id.Equals(questionId))
                 {
-                    Console.WriteLine(question.TheQuestion);
+                    Console.WriteLine(en.Current.TheQuestion);
                     var userAnswer = Console.ReadLine();
-                    return question.EvaluateAnswerByInput(userAnswer);
+                    return en.Current.EvaluateAnswerByInput(userAnswer);
                 }
             }
             throw new Exception("Invalid input");
@@ -50,28 +53,24 @@ namespace VideoExpertSystem
         public string Evaluate()
         {
             var fr = _factParser.GetFactRepository();
-
-            //fr.GetEnumerator().Current.Value[index]
-
-
-
-            foreach (var item in fr)
+            var em = fr.GetEnumerator();
+           
+            while (em.MoveNext())
             {
                 var factCounter = 0;
-                for (int i = 0; i < item.Value.Count; i++)
+                for (int count = 0; count < em.Current.Value.Count; count++)
                 {
-
-                    if (item.Value[i].GetSelectionType().Equals(answers[i].GetSelectionType()))
+                    if (em.Current.Value[count].GetSelectionType().Equals(answers[count].GetSelectionType()))
                     {
                         factCounter++;
                     }
                 }
-                if (factCounter == item.SetOfId.Count)
+                if (factCounter == 4)
                 {
-                    return item.Description;
+                    return em.Current.Description;
                 }
             }
-            throw new Exception("Dont mess with us!");
+            throw new Exception("Don't mess with us!");
         }
     }
 }

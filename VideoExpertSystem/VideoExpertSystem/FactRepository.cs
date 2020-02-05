@@ -15,12 +15,12 @@ namespace VideoExpertSystem
             _factRepo.Add(fact);
         }
 
-        public IEnumerator<Fact> GetEnumerator()
+        public FactEnumerator GetEnumerator()
         {
             return new FactEnumerator(_factRepo);
         }
 
-        class FactEnumerator : IEnumerator<Fact>
+        public class FactEnumerator : IEnumerator<Fact>
         {
             private List<Fact> factRepo;
 
@@ -31,13 +31,24 @@ namespace VideoExpertSystem
                 this.factRepo = factRepo;
             }
 
-            public object Current => Current;
-
-            Fact IEnumerator<Fact>.Current
+            object IEnumerator.Current
+            {
+                get { return Current; }
+            }
+ 
+        public Fact Current
             {
                 get
                 {
-                    return factRepo[index];
+                    try
+                    {
+                        return factRepo[index];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+
+                        throw new Exception("Index out of range");
+                    }   
                 }
             }
 
@@ -45,12 +56,12 @@ namespace VideoExpertSystem
 
             public bool MoveNext()
             {
-                if (index + 1 <= factRepo.Count)
-                {
-                    return false;
-                }
                 index++;
-                return true;
+                if (index < factRepo.Count)
+                {
+                    return true;
+                }
+                return false;
             }
 
             public void Reset()

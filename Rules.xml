@@ -7,7 +7,7 @@
                 <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="no"/>
+                <SingleValue value="no, nope, nyet, noway, nine"/>
             </Selection>
         </Answer>
     </Rule>
@@ -31,7 +31,7 @@
                 <SingleValue value="yes"/>
             </Selection>
             <Selection value="false">
-                <SingleValue value="no"/>
+                <SingleValue value="no, nope, nyet, noway, nine"/>
             </Selection>
         </Answer>
     </Rule>
