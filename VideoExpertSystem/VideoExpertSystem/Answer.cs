@@ -6,8 +6,7 @@ namespace VideoExpertSystem
 {
     public class Answer
     {
-        public  List<Value> valueList;
-        
+        public List<Value> valueList;
 
         public Answer()
         {
@@ -16,12 +15,12 @@ namespace VideoExpertSystem
 
         public bool EvaluateAnswerByInput(string input)
         {
-            foreach(var item in valueList)
+            foreach (var item in valueList)
             {
                 if (item.GetInputPattern().Contains(input))
                     return item.GetSelectionType();
             }
-            throw new Exception("Wrong attribute! No value like "+input);
+            throw new Exception("Wrong attribute! No value like " + input);
         }
 
         public void AddValue(Value value)

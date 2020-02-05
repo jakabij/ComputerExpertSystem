@@ -8,9 +8,9 @@ namespace VideoExpertSystem
     {
         private FactParser _factParser;
         private RuleParser _ruleParser;
-        private Dictionary<string, bool> answers;
+        private List<Value> answers;
 
-        public Dictionary<string, bool> Answers
+        public List<Value> Answers
         {
             get { return answers; }
             set { answers = value; }
@@ -20,13 +20,17 @@ namespace VideoExpertSystem
         {
             _factParser = factParser;
             _ruleParser = ruleParser;
-            answers = new Dictionary<string, bool>();
+            answers = new List<Value>();
+            CollectAnswers();
+            Evaluate();
         }
         public void CollectAnswers()
         {
             foreach (var question in _ruleParser.GetRuleRepository().QuestionList)
             {
-                Answers.Add(question.Id, GetAnswerByQuestion(question.Id));
+                Answers.Add(new SingleValue(question.Id, GetAnswerByQuestion(question.Id)));
+
+                // Multiple value missing
             }
         }
         public bool GetAnswerByQuestion(string questionId)
@@ -45,6 +49,18 @@ namespace VideoExpertSystem
 
         public string Evaluate()
         {
+            var fr = _factParser.GetFactRepository().FactRepo;
+            foreach (var item in fr)
+            {
+                foreach (var val in item.Value)
+                {
+                    if (val.Equals(answers))
+                    {
+                        Console.WriteLine("Iam searchin");
+                        return item.Description;
+                    }
+                }
+            }
             return null;
         }
     }

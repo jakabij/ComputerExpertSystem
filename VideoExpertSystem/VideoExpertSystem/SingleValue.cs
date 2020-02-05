@@ -8,7 +8,7 @@ namespace VideoExpertSystem
     {
         string Param { get; set; }
         bool SelectionType { get; set; }
-        public SingleValue(string param,bool selectionType)
+        public SingleValue(string param, bool selectionType)
         {
             this.Param = param;
             this.SelectionType = selectionType;
