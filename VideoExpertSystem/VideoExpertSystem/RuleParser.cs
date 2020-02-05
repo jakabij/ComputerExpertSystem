@@ -21,9 +21,7 @@ namespace VideoExpertSystem
             {
                 Answer ans = new Answer();
                 foreach(XmlNode node2 in node.ChildNodes[1].ChildNodes)
-
                 {
-              
                     string rules = node2.ChildNodes[0].Attributes["value"].Value;
                     List<string> stringOfLists = rules.Split(",").ToList<string>();
                     if (stringOfLists.Count>1)
