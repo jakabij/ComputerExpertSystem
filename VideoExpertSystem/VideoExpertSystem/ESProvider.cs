@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace VideoExpertSystem
 {
@@ -52,16 +52,21 @@ namespace VideoExpertSystem
             var fr = _factParser.GetFactRepository().FactRepo;
             foreach (var item in fr)
             {
-                foreach (var val in item.Value)
+                var factCounter = 0;
+                for (int i = 0; i < item.Value.Count; i++)
                 {
-                    if (val.Equals(answers))
+
+                    if (item.Value[i].GetSelectionType().Equals(answers[i].GetSelectionType()))
                     {
-                        Console.WriteLine("Iam searchin");
-                        return item.Description;
+                        factCounter++;
                     }
                 }
+                if (factCounter == item.SetOfId.Count)
+                {
+                    return item.Description;
+                }
             }
-            return null;
+            throw new Exception("Dont mess with us!");
         }
     }
 }
