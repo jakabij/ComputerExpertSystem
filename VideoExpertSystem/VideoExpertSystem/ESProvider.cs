@@ -26,8 +26,7 @@ namespace VideoExpertSystem
         }
         public void CollectAnswers()
         {
-            var qr = _ruleParser.GetRuleRepository();
-            var ens = qr.GetEnumerator();
+            var ens = _ruleParser.GetRuleRepository().GetEnumerator();
             while (ens.MoveNext())
             {
                 Answers.Add(new SingleValue(ens.Current.Id, GetAnswerByQuestion(ens.Current.Id)));
@@ -36,8 +35,7 @@ namespace VideoExpertSystem
 
         public bool GetAnswerByQuestion(string questionId)
         {
-            var qr = _ruleParser.GetRuleRepository();
-            var en = qr.GetEnumerator();
+            var en = _ruleParser.GetRuleRepository().GetEnumerator();
             while(en.MoveNext())
             {
                 if (en.Current.Id.Equals(questionId))

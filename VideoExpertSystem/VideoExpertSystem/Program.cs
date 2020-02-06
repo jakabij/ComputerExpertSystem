@@ -6,10 +6,7 @@ namespace VideoExpertSystem
     {
         static void Main(string[] args)
         {
-
             var es = new ESProvider(new FactParser(), new RuleParser());
-
-
         }
     }
 }
