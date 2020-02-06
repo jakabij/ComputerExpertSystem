@@ -36,7 +36,7 @@ namespace VideoExpertSystem
         public bool GetAnswerByQuestion(string questionId)
         {
             var en = _ruleParser.GetRuleRepository().GetEnumerator();
-            while(en.MoveNext())
+            while (en.MoveNext())
             {
                 if (en.Current.Id.Equals(questionId))
                 {
@@ -52,7 +52,7 @@ namespace VideoExpertSystem
         {
             var fr = _factParser.GetFactRepository();
             var em = fr.GetEnumerator();
-           
+
             while (em.MoveNext())
             {
                 var factCounter = 0;
