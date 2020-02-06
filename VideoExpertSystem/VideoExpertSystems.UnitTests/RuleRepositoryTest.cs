@@ -11,30 +11,33 @@ namespace VideoExpertSystems.UnitTests
         [Test]
         public void RuleRepository_AddQuestion_IsTrue()
         {
-            var ruleRepo = new FactRepository();
+            var ruleRepo = new RuleRepository();
+            Answer answer = new Answer();
 
-            Assert.DoesNotThrow(() => ruleRepo.AddFact(new Fact("", "")));
+            Assert.DoesNotThrow(() => ruleRepo.AddQuestion(new Question("", "",answer)));
         }
 
         [Test]
-        public void FactEnumerator_HasCurrentFact_IsTrue()
+        public void QuestionEnumerator_HasCurrentFact_IsTrue()
         {
-            Fact fact1 = new Fact("1", "1");
-            List<Fact> factList = new List<Fact>() { fact1 };
+            Answer answer = new Answer();
+            Question question = new Question("1", "1",answer);
+            List<Question> questionList = new List<Question>() { question };
 
-            var enumerator = new FactRepository.FactEnumerator(factList);
+            var enumerator = new RuleRepository.QuestionEnumerator(questionList);
 
             Assert.DoesNotThrow(() => enumerator.MoveNext());
         }
 
         [Test]
-        public void FactEnumerator_HasNextFact_IsTrue()
+        public void QuestionEnumerator_HasNextFact_IsTrue()
         {
-            Fact fact1 = new Fact("1", "1");
-            Fact fact2 = new Fact("2", "2");
-            List<Fact> factList = new List<Fact>() { fact1, fact2 };
+            Answer answer = new Answer();
+            Question question1 = new Question("1", "1", answer);
+            Question question2 = new Question("2", "2", answer);
+            List<Question> questionList = new List<Question>() { question1, question2 };
 
-            var enumerator = new FactRepository.FactEnumerator(factList);
+            var enumerator = new RuleRepository.QuestionEnumerator(questionList);
 
             enumerator.MoveNext();
             Assert.DoesNotThrow(() => enumerator.MoveNext());

@@ -7,11 +7,11 @@ namespace VideoExpertSystem
 {
     public abstract class XMLParser
     {
-        public XmlDocument LoadXmlDocument(string xmlPath)
+        protected XmlDocument xmlDoc;
+        protected void LoadXmlDocument(string xmlPath)
         {
-            XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load(xmlPath);
-            return xmlDocument;
+           xmlDoc = new XmlDocument();
+           this.xmlDoc.Load(xmlPath);
         }
     }
 }
