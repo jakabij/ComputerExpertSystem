@@ -6,7 +6,7 @@ using VideoExpertSystem;
 
 namespace VideoExpertSystems.UnitTests
 {
-    class FactParserTest
+    public class FactParserTest
     {
         [Test]
         public void FactParser_GetFactRepository_IsTrue()
