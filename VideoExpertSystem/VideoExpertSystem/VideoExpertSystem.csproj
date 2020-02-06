@@ -9,8 +9,4 @@
     <PackageReference Include="NUnit" Version="3.12.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\VideoExpertSystems.UnitTests\VideoExpertSystems.UnitTests.csproj" />
-  </ItemGroup>
-
 </Project>
