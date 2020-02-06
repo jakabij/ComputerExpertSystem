@@ -37,7 +37,10 @@ namespace VideoExpertSystem
         {
             foreach (var item in Value)
             {
-                return item.GetSelectionType();
+                if (item.GetInputPattern()[0].Equals(id))
+                {
+                    return item.GetSelectionType();
+                }
             }
             throw new Exception("No Id like that");
         }
