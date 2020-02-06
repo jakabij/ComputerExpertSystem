@@ -12,9 +12,9 @@ namespace VideoExpertSystem
         public FactRepository GetFactRepository()
         {
             var factRepository = new FactRepository();
-            var xmlDocument = base.LoadXmlDocument("Facts.xml");
+            LoadXmlDocument("Facts.xml");
             
-            foreach (XmlNode node in xmlDocument.DocumentElement)
+            foreach (XmlNode node in xmlDoc.DocumentElement)
             {
                 string id = node.Attributes["id"].Value;
                 string desc = node.ChildNodes[0].Attributes["value"].Value;

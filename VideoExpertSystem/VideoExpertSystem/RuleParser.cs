@@ -13,11 +13,9 @@ namespace VideoExpertSystem
 
         public RuleRepository GetRuleRepository()
         {
-            var factRepository = new FactRepository();
-            var xmlDocument = base.LoadXmlDocument("Rules.xml");
             RuleRepository ruleRepository = new RuleRepository();
-
-            foreach (XmlNode node in xmlDocument.DocumentElement)
+            LoadXmlDocument("Rules.xml");
+            foreach (XmlNode node in xmlDoc.DocumentElement)
             {
                 Answer ans = new Answer();
                 foreach(XmlNode node2 in node.ChildNodes[1].ChildNodes)
