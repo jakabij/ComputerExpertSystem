@@ -65,7 +65,8 @@ namespace VideoExpertSystem
                 }
                 if (factCounter == 4)
                 {
-                    return em.Current.Description;
+                    //return em.Current.Description;
+                    return em.Current.Id;
                 }
             }
             throw new Exception("Don't mess with us!");

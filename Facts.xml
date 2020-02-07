@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
-    <Fact id="xsaxas">
+    <Fact id="https://www.youtube.com/watch?v=Nnu5ik-bjEo">
         <Description value="Cavemen"/>
         <Evals>
             <Eval id="Humour">true</Eval>
@@ -10,8 +10,8 @@
         </Evals>
     </Fact>
 
-    <Fact id="cdcsdc">
-        <Description value="You have got to be joking TED Talk"/>
+    <Fact id="https://www.youtube.com/watch?v=7IVWbpfX9xY">
+        <Description value="You've got to be joking TED Talk"/>
         <Evals>
             <Eval id="Humour">false</Eval>
             <Eval id="Educate">true</Eval>
@@ -20,8 +20,8 @@
         </Evals>
     </Fact>
 
-    <Fact id="maki">
-        <Description value="Lynn Music - Boulangerie"/>
+    <Fact id="https://www.youtube.com/watch?v=bWXazVhlyxQ">
+        <Description value="Rage Against The Machine - Killing In the Name"/>
         <Evals>
             <Eval id="Humour">true</Eval>
             <Eval id="Educate">false</Eval>
@@ -30,8 +30,8 @@
         </Evals>
     </Fact>
 
-	<Fact id="xdsxs">
-        <Description value="Wolfenstein: The New Order"/>
+	<Fact id="https://www.youtube.com/watch?v=AOT4RvX9KB0">
+        <Description value="Reggie Watts - Fuck Shit Stack SUB ITA / ENG"/>
         <Evals>
             <Eval id="Humour">true</Eval>
             <Eval id="Educate">true</Eval>
@@ -40,7 +40,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="fevewe">
+	<Fact id="https://www.youtube.com/watch?v=4-43lLKaqBQ">
         <Description value="The Animals - House of the Rising Sun"/>
         <Evals>
             <Eval id="Humour">true</Eval>
@@ -50,7 +50,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="vever">
+	<Fact id="https://www.youtube.com/watch?v=EqPtz5qN7HM">
         <Description value="Eagles - Hotel California "/>
         <Evals>
             <Eval id="Humour">false</Eval>
@@ -60,7 +60,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="cwecfevr">
+	<Fact id="https://www.youtube.com/watch?v=s_IMFIOGCFc">
         <Description value="Sting - Englishman In New York"/>
         <Evals>
             <Eval id="Humour">false</Eval>
@@ -70,7 +70,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="cerve">
+	<Fact id="https://www.youtube.com/watch?v=4mtfnfQoAco">
         <Description value="Mattafix - Big City Life"/>
         <Evals>
             <Eval id="Humour">false</Eval>
@@ -80,7 +80,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="cecwwec">
+	<Fact id="https://www.youtube.com/watch?v=AcHHE9bvLgY">
         <Description value="VANUPIÉ - ROCKADOWN"/>
         <Evals>
             <Eval id="Humour">false</Eval>
@@ -90,7 +90,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="cofeffe">
+	<Fact id="https://www.youtube.com/watch?v=Bd1CUTrcy5U">
         <Description value="Dub FX - So Are You"/>
         <Evals>
             <Eval id="Humour">false</Eval>
@@ -100,7 +100,7 @@
         </Evals>
 	</Fact>
 
-    <Fact id="cscsd">
+    <Fact id="https://www.youtube.com/watch?v=RHQC4fAhcbU">
         <Description value="Eminem - Darkness"/>
         <Evals>
             <Eval id="Humour">true</Eval>
@@ -110,8 +110,8 @@
         </Evals>
     </Fact>
 
-	<Fact id="cdecds">
-        <Description value="Eminem Final Rap Battles"/>
+	<Fact id="https://www.youtube.com/watch?v=xh1ROLEDyP4">
+        <Description value="8 Mile | Eminem's Final Rap Battles"/>
         <Evals>
             <Eval id="Humour">true</Eval>
             <Eval id="Educate">false</Eval>
@@ -120,7 +120,7 @@
         </Evals>
     </Fact>
 	
-	<Fact id="cdscvfd">
+	<Fact id="https://www.youtube.com/watch?v=eQkSArQxYJg">
         <Description value="Logic - Homicide ft. Eminem"/>
         <Evals>
             <Eval id="Humour">false</Eval>
@@ -130,7 +130,7 @@
         </Evals>
     </Fact>
 	
-	<Fact id="csd">
+	<Fact id="https://www.youtube.com/watch?v=ceQ2XFS1tUo">
         <Description value="True Sight : The International 2019 Finals"/>
         <Evals>
             <Eval id="Humour">true</Eval>
@@ -140,8 +140,8 @@
         </Evals>
     </Fact>
 	
-	<Fact id="vfrvr">
-        <Description value="Nas &amp; Damian Marley - Patience"/>
+	<Fact id="https://www.youtube.com/watch?v=uLkKD2hFnIc">
+        <Description value="Nas and Damian Marley - Patience"/>
         <Evals>
             <Eval id="Humour">true</Eval>
             <Eval id="Educate">true</Eval>
@@ -150,7 +150,7 @@
         </Evals>
     </Fact>
 
-	<Fact id="xascfec">
+	<Fact id="https://www.youtube.com/watch?v=d8ekz_CSBVg">
         <Description value="Three Days Grace - I Hate Everything About You"/>
         <Evals>
             <Eval id="Humour">false</Eval>
