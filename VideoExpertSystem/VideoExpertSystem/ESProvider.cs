@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 namespace VideoExpertSystem
 {
@@ -65,11 +66,29 @@ namespace VideoExpertSystem
                 }
                 if (factCounter == 4)
                 {
-                    //return em.Current.Description;
-                    return em.Current.Id;
+                    OpenUrl(em.Current.Id);
+                    return em.Current.Description;
                 }
             }
             throw new Exception("Don't mess with us!");
+        }
+
+        public void OpenUrl(string name)
+        {
+            if(!string.IsNullOrEmpty(name))
+            {
+                try
+                {
+                    Process proc = new Process();
+                    proc.StartInfo.UseShellExecute = true;
+                    proc.StartInfo.FileName = name;
+                    proc.Start();
+                }
+                catch
+                {
+                    Console.WriteLine("Can't open the link!");
+                }
+            }
         }
     }
 }
