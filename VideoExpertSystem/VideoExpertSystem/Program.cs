@@ -1,12 +1,22 @@
-﻿using System;
-
-namespace VideoExpertSystem
+﻿namespace VideoExpertSystem
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var es = new ESProvider(new FactParser(), new RuleParser());
+            bool GoodInput = true;
+            while (GoodInput)
+            {
+                try
+                {
+                    var es = new ESProvider(new FactParser(), new RuleParser());
+                    GoodInput = false;
+                }
+                catch
+                {
+                    System.Console.WriteLine("Bad input boy!");
+                }
+            }
         }
     }
 }
